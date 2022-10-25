@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamesOfPairs.Views.MatchPairsPage"
+             xmlns:local="clr-namespace:GamesOfPairs.ViewModels"
+             xmlns:custom="clr-namespace:GamesOfPairs;assembly=GamesOfPairs"
+             Title="MatchPairsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:StringToColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <local:MatchPairsViewModel x:Name="MatchVM"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <RefreshView>
+        <StackLayout>
+            <StackLayout Margin="10,18,20,10" HorizontalOptions="CenterAndExpand" >
+                <Grid Padding="4,0" RowSpacing="10" ColumnSpacing="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="125"/>
+                        <RowDefinition Height="125"/>
+                        <RowDefinition Height="125"/>
+                        <RowDefinition Height="125"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <Button AutomationId="But1" x:Name="Butt1" Grid.Row="0"  Grid.Column="0" Text="{Binding MText1}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor1, Mode=TwoWay, Converter={StaticResource ColorConverter,ColorConverter}}" ClassId="{Binding MId1}" Command="{Binding ChangeColorMCommand}" CommandParameter="{x:Reference Butt1}" />
+                    <Button AutomationId="But2" x:Name="Butt2" Grid.Row="0"  Grid.Column="1" Text="{Binding MText2}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor2, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId2}" Command="{Binding ChangeColorMCommand}" CommandParameter="{x:Reference Butt2}"/>
+                    <Button AutomationId="But3" x:Name="Butt3" Grid.Row="0"  Grid.Column="2" Text="{Binding MText3}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor3, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId3}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt3}"/>
+                    <Button AutomationId="But4" x:Name="Butt4" Grid.Row="0"  Grid.Column="3" Text="{Binding MText4}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor4, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId4}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt4}"/>
+                    <Button AutomationId="But5" x:Name="Butt5" Grid.Row="1"  Grid.Column="0" Text="{Binding MText5}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor5, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId5}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt5}"/>
+                    <Button AutomationId="But6" x:Name="Butt6" Grid.Row="1"  Grid.Column="1" Text="{Binding MText6}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor6, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId6}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt6}"/>
+                    <Button AutomationId="But7" x:Name="Butt7" Grid.Row="1"  Grid.Column="2" Text="{Binding MText7}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor7, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId7}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt7}"/>
+                    <Button AutomationId="But8" x:Name="Butt8" Grid.Row="1"  Grid.Column="3" Text="{Binding MText8}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor8, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId8}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt8}"/>
+                    <Button AutomationId="But9" x:Name="Butt9" Grid.Row="2"  Grid.Column="0" Text="{Binding MText9}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor9, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId9}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt9}"/>
+                    <Button AutomationId="But10" x:Name="Butt10" Grid.Row="2"  Grid.Column="1" Text="{Binding MText10}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor10, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId10}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt10}"/>
+                    <Button AutomationId="But11" x:Name="Butt11" Grid.Row="2"  Grid.Column="2" Text="{Binding MText11}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor11, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId11}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt11}"/>
+                    <Button AutomationId="But12" x:Name="Butt12" Grid.Row="2"  Grid.Column="3" Text="{Binding MText12}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor12, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId12}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt12}"/>
+                    <Button AutomationId="But13" x:Name="Butt13" Grid.Row="3" Grid.Column="0" Text="{Binding MText13}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor13, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId13}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt13}"/>
+                    <Button AutomationId="But14" x:Name="Butt14" Grid.Row="3" Grid.Column="1" Text="{Binding MText14}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor14, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId14}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt14}"/>
+                    <Button AutomationId="But15" x:Name="Butt15" Grid.Row="3" Grid.Column="2" Text="{Binding MText15}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor15, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId15}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt15}"/>
+                    <Button AutomationId="But16" x:Name="Butt16" Grid.Row="3" Grid.Column="3" Text="{Binding MText16}" Style="{StaticResource MButton}" BackgroundColor="{Binding MButtBckColor16, Converter={StaticResource ColorConverter}}" ClassId="{Binding MId16}" Command="{Binding ChangeColorMCommand}"  CommandParameter="{x:Reference Butt16}"/>
+
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--<Label x:Name="CorrectCntName" Text="0" Grid.Row="0" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  BackgroundColor="Green"  FontSize="Large" IsVisible="{Binding IsCorrectCntVisible, Mode=TwoWay}"></Label>
+                    <Label x:Name="WrongCntName" Text="0" Grid.Row="0" Grid.Column="2" BackgroundColor="Red" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Large" IsVisible="{Binding IsWrongCntVisible, Mode=TwoWay}"></Label>-->
+
+                    <Button Text="Next" Grid.Row="1" Grid.Column="1"  BackgroundColor="Green" TextColor="Black" TextTransform="None"  Command="{Binding ResetCommand}"></Button>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>
